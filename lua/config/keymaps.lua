@@ -5,3 +5,4 @@
 local map = LazyVim.safe_keymap_set
 
 map("n", "<leader>gg", "<cmd>Neogit cwd=%:p:h<cr>", { desc = "Neogit (magit yay!)" })
+map("n", "<leader>ao", "<cmd>Oil<cr>", { desc = "Neogit (magit yay!)" })
