@@ -10,4 +10,7 @@ return {
     "echasnovski/mini.pick", -- optional
     -- "folke/snacks.nvim",             -- optional
   },
+  keys = {
+    { "<leader>gg", "<cmd>Neogit cwd=%:p:h<cr>", "n", desc = "Neogit (magit yay!)" },
+  },
 }
