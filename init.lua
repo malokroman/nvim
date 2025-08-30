@@ -1,7 +1,11 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-vim.opt.shell = "powershell.exe"
+if vim.fn.has("macunix") then
+  vim.opt.shell = "xonsh"
+elseif vim.fn.has("win64") then
+  vim.opt.shell = "powershell.exe"
+end
 
 -- Theme
 if vim.g.neovide then
