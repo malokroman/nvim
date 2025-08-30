@@ -36,7 +36,7 @@ return {
     set("n", "gl", mc.alignCursors)
 
     -- Split visual selections by regex.
-    set("x", "S", mc.splitCursors, { desc = "MC - Split cursor by regex in selection" })
+    set("x", "gs", mc.splitCursors, { desc = "MC - Split cursor by regex in selection" })
 
     -- match new cursors within visual selections by regex.
     set("x", "M", mc.matchCursors, { desc = "MC - Match cursor by regex in selection" })
