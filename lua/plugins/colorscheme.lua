@@ -1,5 +1,4 @@
 return {
-  -- add gruvbox
   {
     "WilliamHsieh/catppuccin.nvim",
   },

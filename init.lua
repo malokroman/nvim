@@ -26,8 +26,8 @@ local highlight = {
 local hooks = require("ibl.hooks")
 
 hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-  vim.api.nvim_set_hl(0, "Yellow", { fg = "#ebe97a" })
-  vim.api.nvim_set_hl(0, "White", { fg = "#e8e8e8" })
+  vim.api.nvim_set_hl(0, "Yellow", { fg = "#cfcc53" })
+  vim.api.nvim_set_hl(0, "White", { fg = "#c8c8c8" })
   vim.api.nvim_set_hl(0, "Purple", { fg = "#9374ab" })
   vim.api.nvim_set_hl(0, "Grey", { fg = "#636363" })
 end)
