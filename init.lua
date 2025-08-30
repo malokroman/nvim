@@ -15,3 +15,21 @@ end
 if vim.g.neovide then
   vim.o.guifont = "FiraCode Nerd Font Mono"
 end
+
+local highlight = {
+  "Yellow",
+  "White",
+  "Purple",
+  "Grey",
+}
+
+local hooks = require("ibl.hooks")
+
+hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+  vim.api.nvim_set_hl(0, "Yellow", { fg = "#ebe97a" })
+  vim.api.nvim_set_hl(0, "White", { fg = "#e8e8e8" })
+  vim.api.nvim_set_hl(0, "Purple", { fg = "#9374ab" })
+  vim.api.nvim_set_hl(0, "Grey", { fg = "#636363" })
+end)
+
+require("ibl").setup({ indent = { highlight = highlight } })
