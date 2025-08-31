@@ -14,6 +14,7 @@ end
 -- Theme
 if vim.g.neovide then
   vim.o.guifont = "FiraCode Nerd Font Mono"
+  vim.g.neovide_opacity = 0.88
 end
 
 if not vim.g.vscode then
