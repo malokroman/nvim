@@ -14,6 +14,25 @@ return {
   ---@module 'obsidian'
   ---@type obsidian.config
   opts = {
+    notes_subdir = "2. Quick Notes",
+    new_notes_location = "notes_subdir",
+    templates = {
+      folder = "templates",
+      date_format = "%Y-%m-%d",
+      time_format = "%H, %M",
+      substitutions = {
+        dayofweek = function()
+          return os.date("%A") -- luacheck: ignore
+        end,
+        dow = function()
+          return os.date("%a") -- luacheck: ignore
+        end,
+        month = function()
+          return os.date("%B") -- luacheck: ignore
+        end,
+      },
+    },
+
     workspaces = {
       {
         name = "personal",
@@ -24,6 +43,14 @@ return {
         path = "~/vaults/work",
       },
     },
+
+    daily_notes = {
+      folder = "1. Daily Notes",
+      template = "daily.md",
+    },
+
+    disable_frontmatter = true,
+
     -- see below for full list of options 👇
   },
   keys = {
@@ -52,9 +79,11 @@ return {
     { "<leader>ody", "<cmd>ObsidianYesterday<cr>", desc = "Obsidian - Yesterday" },
     { "<leader>odT", "<cmd>ObsidianTomorrow<cr>", desc = "Obsidian - Tomorrow" },
     { "<leader>odd", "<cmd>ObsidianDailies<cr>", desc = "Obsidian - Dailies" },
-    { "<leader>odm", "<cmd>ObsidianDailies -31 1<cr>", desc = "Obsidian Dailies - Last month" },
-    { "<leader>odM", "<cmd>ObsidianDailies -1 31<cr>", desc = "Obsidian Dailies - Coming month" },
-    { "<leader>odW", "<cmd>ObsidianDailies -7 7<cr>", desc = "Obsidian Dailies - Last week and coming week" },
+    { "<leader>odm", "<cmd>ObsidianDailies 1 31<cr>", desc = "Obsidian Dailies - Coming month" },
+    { "<leader>odM", "<cmd>ObsidianDailies -31 -1<cr>", desc = "Obsidian Dailies - Last month" },
+    { "<leader>odw", "<cmd>ObsidianDailies 1 7<cr>", desc = "Obsidian Dailies - Coming week" },
+    { "<leader>odW", "<cmd>ObsidianDailies -7 -1<cr>", desc = "Obsidian Dailies - Last week" },
+    { "<leader>odY", "<cmd>ObsidianDailies -366 -1<cr>", desc = "Obsidian Dailies - Last year" },
 
     -- Obsidian Editing Commands
     { "gl", "<cmd>ObsidianLink<cr>", desc = "Obsidian - Link to a note", ft = "markdown" },
