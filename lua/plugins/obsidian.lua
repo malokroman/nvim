@@ -16,6 +16,9 @@ return {
   opts = {
     notes_subdir = "2. Quick Notes",
     new_notes_location = "notes_subdir",
+    note_id_func = function(title)
+      return title
+    end,
     templates = {
       folder = "templates",
       date_format = "%Y-%m-%d",
@@ -38,6 +41,9 @@ return {
         end,
         year = function()
           return os.date("%Y") -- luacheck: ignore
+        end,
+        time = function()
+          return os.date("%H:%M") -- luacheck: ignore
         end,
       },
     },
@@ -87,6 +93,7 @@ return {
     { "<leader>oT", "<cmd>ObsidianToday<cr>", desc = "Obsidian - Today's page" },
     { "<leader>odt", "<cmd>ObsidianToday<cr>", desc = "Obsidian - Today's page" },
     { "<leader>ody", "<cmd>ObsidianYesterday<cr>", desc = "Obsidian - Yesterday" },
+    { "<leader>o<c-t>", "<cmd>ObsidianToday<cr>", desc = "Obsidian - Today's page" },
     { "<leader>odT", "<cmd>ObsidianTomorrow<cr>", desc = "Obsidian - Tomorrow" },
     { "<leader>odd", "<cmd>ObsidianDailies<cr>", desc = "Obsidian - Dailies" },
     { "<leader>odm", "<cmd>ObsidianDailies 1 31<cr>", desc = "Obsidian Dailies - Coming month" },
