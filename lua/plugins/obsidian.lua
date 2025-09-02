@@ -27,20 +27,29 @@ return {
         dow = function()
           return os.date("%a") -- luacheck: ignore
         end,
-        month = function()
+        dateofmonth = function()
+          return os.date("%d") -- luacheck: ignore
+        end,
+        month_name = function()
           return os.date("%B") -- luacheck: ignore
+        end,
+        month = function()
+          return os.date("%m") -- luacheck: ignore
+        end,
+        year = function()
+          return os.date("%Y") -- luacheck: ignore
         end,
       },
     },
 
     workspaces = {
       {
-        name = "personal",
-        path = "~/vaults/personal",
+        name = "default",
+        path = "~/vaults/default",
       },
       {
-        name = "work",
-        path = "~/vaults/work",
+        name = "personal",
+        path = "~/vaults/personal",
       },
     },
 
