@@ -75,6 +75,7 @@ return {
     { "<leader>osc", "<cmd>ObsidianTOC<cr>", desc = "Obsidian - Table of contents", ft = "markdown" },
 
     -- Obsidian Dailies
+    { "<leader>oT", "<cmd>ObsidianToday<cr>", desc = "Obsidian - Today's page" },
     { "<leader>odt", "<cmd>ObsidianToday<cr>", desc = "Obsidian - Today's page" },
     { "<leader>ody", "<cmd>ObsidianYesterday<cr>", desc = "Obsidian - Yesterday" },
     { "<leader>odT", "<cmd>ObsidianTomorrow<cr>", desc = "Obsidian - Tomorrow" },
