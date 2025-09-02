@@ -91,9 +91,9 @@ return {
 
     -- Obsidian Dailies
     { "<leader>oT", "<cmd>ObsidianToday<cr>", desc = "Obsidian - Today's page" },
+    { "<leader>o<c-t>", "<cmd>ObsidianYesterday<cr>", desc = "Obsidian - Today's page" },
     { "<leader>odt", "<cmd>ObsidianToday<cr>", desc = "Obsidian - Today's page" },
     { "<leader>ody", "<cmd>ObsidianYesterday<cr>", desc = "Obsidian - Yesterday" },
-    { "<leader>o<c-t>", "<cmd>ObsidianTomorrow<cr>", desc = "Obsidian - Today's page" },
     { "<leader>odT", "<cmd>ObsidianTomorrow<cr>", desc = "Obsidian - Tomorrow" },
     { "<leader>odd", "<cmd>ObsidianDailies<cr>", desc = "Obsidian - Dailies" },
     { "<leader>odm", "<cmd>ObsidianDailies 1 31<cr>", desc = "Obsidian Dailies - Coming month" },
