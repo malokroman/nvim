@@ -9,7 +9,7 @@ return {
   ---@type render.md.UserConfig
   opts = {
     bullet = {
-      icons = { '○', '◇' },
+      icons = { "○", "◇" },
       right_pad = 1,
     },
     code = {
@@ -17,6 +17,18 @@ return {
       left_pad = 2,
       right_pad = 2,
       min_width = 50,
+    },
+    checkbox = {
+      enabled = true,
+      unchecked = {
+        icon = "󰄱",
+      },
+      checked = {
+        icon = "󰄵",
+      },
+      custom = {
+        todo = { raw = "[-]", rendered = "󰄰", highlight = "RenderMarkdownTodo" },
+      },
     },
   },
 }

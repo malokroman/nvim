@@ -14,6 +14,7 @@ return {
   ---@module 'obsidian'
   ---@type obsidian.config
   opts = {
+    ui = { enable = false },
     notes_subdir = "2. Quick Notes",
     new_notes_location = "notes_subdir",
     note_id_func = function(title)
