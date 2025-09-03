@@ -3,7 +3,7 @@ return {
     "mfussenegger/nvim-lint",
     opts = {
       linters = {
-        markdownlint = {
+        ["markdownlint-cli2"] = {
           args = {
             "--disable", "MD013", -- linelength
             "--",
