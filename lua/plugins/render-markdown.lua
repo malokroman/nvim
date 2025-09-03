@@ -29,5 +29,19 @@ return {
         todo = { raw = "[-]", rendered = "󰄰", highlight = "RenderMarkdownTodo" },
       },
     },
+    link = {
+      custom = {
+        activity = { pattern = 'Activity/', icon = '󰿖 ' },
+        seed = { pattern = 'Seed/', icon = '󰹣 ' },
+        tool = { pattern = 'Tool/', icon = '󱁤 ' },
+        plant_type = { pattern = 'Plant Type/', icon = ' ' },
+        event = { pattern = 'Event/', icon = '󱨳 ' },
+        feeling = { pattern = 'Feeling/', icon = ' ' },
+        task = { pattern = 'Task/', icon = ' ' },
+        recipe = { pattern = 'Recipe/', icon = '󱤖 ' },
+        distraction = { pattern = 'Distraction/', icon = ' ' },
+        cooking_technique = { pattern = 'Cooking Technique/', icon = ' ' },
+      },
+    },
   },
 }
