@@ -10,7 +10,6 @@ return {
   opts = {
     bullet = {
       icons = { "○", "◇" },
-      right_pad = 1,
     },
     code = {
       language_pad = 2,
