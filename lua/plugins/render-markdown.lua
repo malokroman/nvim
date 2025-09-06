@@ -8,15 +8,18 @@ return {
   ---@module 'render-markdown'
   ---@type render.md.UserConfig
   opts = {
+
     bullet = {
       icons = { "○", "◇" },
     },
+
     code = {
       language_pad = 2,
       left_pad = 2,
       right_pad = 2,
       min_width = 50,
     },
+
     checkbox = {
       enabled = true,
       unchecked = {
@@ -29,6 +32,7 @@ return {
         todo = { raw = "[-]", rendered = "󰄰", highlight = "RenderMarkdownTodo" },
       },
     },
+
     link = {
       custom = {
         activity = { pattern = 'Activity/', icon = '󰿖 ' },
@@ -44,5 +48,6 @@ return {
         restaurant = { pattern = 'Restaurant/', icon = ' ' },
       },
     },
+
   },
 }
