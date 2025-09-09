@@ -62,7 +62,7 @@ return {
 
     daily_notes = {
       folder = "1. Daily Notes",
-      template = "daily.md",
+      template = "daily_template.md",
     },
 
     disable_frontmatter = true,
