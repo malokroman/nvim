@@ -46,6 +46,15 @@ return {
         time = function()
           return os.date("%H:%M") -- luacheck: ignore
         end,
+        yesterday = function()
+          return os.date("%Y-%m-%d", os.time() - 86400) -- luacheck: ignore
+        end,
+        today = function()
+          return os.date("%Y-%m-%d") -- luacheck: ignore
+        end,
+        tomorrow = function()
+          return os.date("%Y-%m-%d", os.time() + 86400) -- luacheck: ignore
+        end,
       },
     },
 
