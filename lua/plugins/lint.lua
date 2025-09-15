@@ -5,7 +5,8 @@ return {
       linters = {
         ["markdownlint-cli2"] = {
           args = {
-            "--disable", "MD013", -- linelength
+            "--disable",
+            "MD013", -- linelength
             "--",
           },
         },
