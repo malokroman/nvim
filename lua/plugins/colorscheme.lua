@@ -1,14 +1,12 @@
 return {
   {
-    "WilliamHsieh/catppuccin.nvim",
-    priority = 1000,
-  },
-
-  -- Configure LazyVim to load gruvbox
-  {
-    "LazyVim/LazyVim",
+    "tokyonight.nvim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      }
     },
     priority = 1000,
   },

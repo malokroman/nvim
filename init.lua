@@ -15,9 +15,7 @@ end
 if vim.g.neovide then
   vim.o.guifont = "FiraCode Nerd Font Mono"
   vim.g.neovide_input_macos_option_key_is_meta = 'only_left'
-  if not vim.fn.has("win32") then
-    vim.g.neovide_opacity = 0.88
-  end
+  vim.g.neovide_opacity = 0.8
 end
 
 if not vim.g.vscode then
