@@ -12,28 +12,39 @@ elseif vim.fn.executable("powershell") == 1 then
 end
 
 -- Theme
-if vim.g.neovide then
-  vim.o.guifont = "FiraCode Nerd Font Mono"
-  vim.g.neovide_input_macos_option_key_is_meta = 'only_left'
-  vim.g.neovide_opacity = 0.8
-end
+vim.api.nvim_command("set nocursorline")
 
-if not vim.g.vscode then
-  local highlight = {
-    "Yellow",
-    "White",
-    "Purple",
-    "Grey",
-  }
+local nonbinary_hl = {
+  "Yellow",
+  "White",
+  "Purple",
+  "Grey",
+}
 
-  local hooks = require("ibl.hooks")
+local hooks = require("ibl.hooks")
 
-  hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-    vim.api.nvim_set_hl(0, "Yellow", { fg = "#cfcc53" })
-    vim.api.nvim_set_hl(0, "White", { fg = "#c8c8c8" })
-    vim.api.nvim_set_hl(0, "Purple", { fg = "#9374ab" })
-    vim.api.nvim_set_hl(0, "Grey", { fg = "#636363" })
-  end)
+hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+  vim.api.nvim_set_hl(0, "Yellow", { fg = "#cfcc53" })
+  vim.api.nvim_set_hl(0, "White", { fg = "#c8c8c8" })
+  vim.api.nvim_set_hl(0, "Purple", { fg = "#9374ab" })
+  vim.api.nvim_set_hl(0, "Grey", { fg = "#636363" })
+end)
 
-  require("ibl").setup({ indent = { highlight = highlight } })
-end
+require("ibl").setup({
+  indent = { highlight = nonbinary_hl },
+  scope = { highlight = nonbinary_hl, show_start = true, show_end = true, show_exact_scope = true },
+  -- whitespace = { highlight = pansexual_hl, remove_blankline_trail = false },
+})
+
+vim.api.nvim_set_hl(0, "TreesitterContext", { bg = nil, bold = true, underdotted = true })
+
+vim.api.nvim_set_hl(0, "IlluminatedWordRead", { bg = nil, italic = true })
+vim.api.nvim_set_hl(0, "IlluminatedWordText", { bg = nil, italic = true })
+vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = nil, italic = true })
+
+vim.api.nvim_set_hl(0, "RenderMarkdownH1Bg", { bg = "#cc53cf", fg = "#EEEEEE" })
+vim.api.nvim_set_hl(0, "RenderMarkdownH2Bg", { bg = "#53bcdf", fg = "#FFFFFF" })
+vim.api.nvim_set_hl(0, "RenderMarkdownH3Bg", { bg = "#cfcc53", fg = "#FFFFFF" })
+vim.api.nvim_set_hl(0, "RenderMarkdownH4Bg", { bg = "#cc53cf", fg = "#EEEEEE" })
+vim.api.nvim_set_hl(0, "RenderMarkdownH5Bg", { bg = "#53bcdf", fg = "#FFFFFF" })
+vim.api.nvim_set_hl(0, "RenderMarkdownH6Bg", { bg = "#cfcc53", fg = "#FFFFFF" })
