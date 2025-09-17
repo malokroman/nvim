@@ -32,7 +32,7 @@ end)
 
 require("ibl").setup({
   indent = { highlight = nonbinary_hl },
-  scope = { highlight = nonbinary_hl, show_start = true, show_end = true, show_exact_scope = true },
+  scope = { enabled = false },
   -- whitespace = { highlight = pansexual_hl, remove_blankline_trail = false },
 })
 
