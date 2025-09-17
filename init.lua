@@ -1,6 +1,10 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
+-- Options
+vim.opt.autochdir = true
+
+-- Shell
 if vim.fn.executable("xonsh") == 1 then
   vim.opt.shell = "xonsh"
 elseif vim.fn.executable("fish") == 1 then

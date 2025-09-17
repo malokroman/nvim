@@ -86,12 +86,13 @@ return {
     { "<leader>oN", "<cmd>ObsidianNew<cr>", desc = "Obsidian - New note" },
     { "<cr>", "<cmd>ObsidianFollowLink vsplit<cr>", mode = "x", desc = "Obsidian - Follow Link", ft = "markdown" },
     { "<localleader>O", "<cmd>ObsidianOpen <c-r>%<cr>", desc = "Obsidian - Open", ft = "markdown" },
-    { "<leader>oe", ":ObsidianExtractNote<cr>", mode = "x", desc = "Obsidian - Extract note" },
+    { "<localleader>e", ":ObsidianExtractNote<cr>", mode = "x", desc = "Obsidian - Extract note" },
     { "O", ":ObsidianExtractNote<cr>", mode = "x", desc = "Obsidian - Extract note" },
 
     -- Obsidian Searches
-    { "<leader>o<space>", "<cmd>ObsidianSearch<cr>", desc = "Obsidian - Search or create" },
-    { "<leader>oss", "<cmd>ObsidianQuickSwitch<cr>", desc = "Obsidian - Quick switch" },
+    { "<leader>o/", "<cmd>ObsidianSearch<cr>", desc = "Obsidian - Search or create" },
+    { "<leader>o<space>", "<cmd>ObsidianQuickSwitch<cr>", desc = "Obsidian - Quick switch" },
+    { "<leader>of", "<cmd>ObsidianQuickSwitch<cr>", desc = "Obsidian - Quick switch" },
     { "<localleader>sl", "<cmd>ObsidianLinks<cr>", desc = "Obsidian - Search links in file", ft = "markdown" },
     { "<localleader>sb", "<cmd>ObsidianBacklinks<cr>", desc = "Obsidian - Backlinks", ft = "markdown" },
     { "<localleader>st", "<cmd>ObsidianTags<cr>", desc = "Obsidian - Tags", ft = "markdown" },
@@ -116,7 +117,8 @@ return {
     { "gl", "<cmd>ObsidianLink<cr>", desc = "Obsidian - Link to a note", ft = "markdown" },
     { "gL", "<cmd>ObsidianLinkNew<cr>", desc = "Obsidian - Link to a new note", ft = "markdown" },
     { "<localleader>l", "<cmd>ObsidianLink<cr>", mode = "x", desc = "Obsidian - Link to a note", ft = "markdown" },
-    { "<localleader>l", "<cmd>ObsidianLinkNew<cr>", desc = "Obsidian - Link to a new note", ft = "markdown" },
+    { "<localleader>L", "<cmd>ObsidianLinkNew<cr>", mode = "x", desc = "Obsidian - Link to a new note", ft = "markdown" },
+    { "<localleader>n", "<cmd>ObsidianNew<cr>", mode = { "n", "x" }, desc = "Obsidian - Create new note", ft = "markdown" },
 
     { "<localleader>p", "<cmd>ObsidianPasteImg<cr>", desc = "Obsidian - Paste image", ft = "markdown" },
   },
