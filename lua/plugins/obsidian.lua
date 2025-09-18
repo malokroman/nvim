@@ -118,7 +118,9 @@ return {
     { "gL", "<cmd>ObsidianLinkNew<cr>", desc = "Obsidian - Link to a new note", ft = "markdown" },
     { "<localleader>l", "<cmd>ObsidianLink<cr>", mode = "x", desc = "Obsidian - Link to a note", ft = "markdown" },
     { "<localleader>L", "<cmd>ObsidianLinkNew<cr>", mode = "x", desc = "Obsidian - Link to a new note", ft = "markdown" },
-    { "<localleader>n", "<cmd>ObsidianNew<cr>", mode = { "n", "x" }, desc = "Obsidian - Create new note", ft = "markdown" },
+    { "<localleader>n", "<cmd>ObsidianNew<cr>", desc = "Obsidian - Create new note", ft = "markdown" },
+    { "<localleader>l", "yi]:ObsidianNew <c-r>\"<cr>", desc = "Obsidian - Create new note from link", ft = "markdown" },
+    { "<localleader>n", "y:ObsidianNew <c-r>\"<cr>", mode = "x", desc = "Obsidian - Create new note", ft = "markdown" },
 
     { "<localleader>p", "<cmd>ObsidianPasteImg<cr>", desc = "Obsidian - Paste image", ft = "markdown" },
   },
