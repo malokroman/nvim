@@ -4,6 +4,13 @@ require("config.lazy")
 if not vim.g.vscode then
   local hooks = require("ibl.hooks")
 
+  local nonbinary_hl = {
+    "Yellow",
+    "White",
+    "Purple",
+    "Grey",
+  }
+
   hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
     vim.api.nvim_set_hl(0, "Yellow", { fg = "#cfcc53" })
     vim.api.nvim_set_hl(0, "White", { fg = "#c8c8c8" })
