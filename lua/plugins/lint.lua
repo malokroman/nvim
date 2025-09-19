@@ -7,6 +7,7 @@ return {
           args = {
             "--disable",
             "MD013", -- linelength
+            "MD028", -- no-blanks-blockquote
             "--",
           },
         },
